@@ -1,4 +1,5 @@
 # Alaska-Steganalysis
+![image](https://github.com/Himanshukatarwar/Alaska-Steganalysis/blob/main/alaska.png)
 <b>What is steganography?</b> <br><i>Steganography is the practice of concealing a file, message, image, or video within another file, message, image, or video.</i><br><HR>
 <p>To understand steganography we need to understand the way that digital images work.Digital image consist of pixels.Pixels are the sample of original Images.More pixels more accurate the image.Every pixels store in 8bits format .For example :Let consider RGB image  has RGB(218,150,149) value and store in 8 bits format like :R=11011010 ,G=10010110,B=10010101.Rightmost bit is the most significant bit and the leftmost bit is the least significant bit .Least significant bit open gate for the steganography .Most significant bit are taken from the image and least significant bit are change with the encrypted data.</p>
   <p>In this problem,Steganography are not on pixels of images.</p>
@@ -23,9 +24,15 @@
 
 <h2> Metric:</h2><br>
 <h3>Weighted AUC</h3><br>
-    <p>In order to focus on reliable detection with an emphasis on low false-alarm rate, metric are used here is weighted AUC. To calculate the weighted AUC, each region of the ROC curve is weighted according to these chosen parameters:
+    <p>In order to focus on reliable detection with an emphasis on low false-alarm rate, metric are used here is weighted AUC. To calculate the weighted AUC, each region of the ROC curve is weighted according to these chosen parameters:</p>
 <br>
 tpr_thresholds = [0.0, 0.4, 1.0]<br>
 weights = [2, 1]
 <br>
-In other words, the area between the true positive rate of 0 and 0.4 is weighted 2X, the area between 0.4 and 1 is now weighed (1X). The total area is normalized by the sum of weights such that the final weighted AUC is between 0 and 1.
+<p>In other words, the area between the true positive rate of 0 and 0.4 is weighted 2X, the area between 0.4 and 1 is now weighed (1X). The total area is normalized by the sum of weights such that the final weighted AUC is between 0 and 1.</p>
+<img src=https://github.com/Himanshukatarwar/Alaska-Steganalysis/blob/main/weight%20.png>
+<h2>Approach</h2>
+<p>1.Try to analysis the images.<br>
+  2.Use EfficientNet B0 for training model.<br>
+  3. Custom training loop with tensorflow is used.<br>
+  </p>
